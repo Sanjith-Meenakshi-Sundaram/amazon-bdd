@@ -31,7 +31,8 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//div[contains(@class,'a-alert-content')]")
     WebElement errorMessage;
 
-    // ---------------- ACTION METHODS ----------------
+    // ACTION METHODS 
+    //action
 
     public void hoverAccountMenu() {
 
