@@ -19,7 +19,7 @@ public class ExcelReader {
             XSSFSheet sheet = workbook.getSheetAt(sheetIndex);
 
             int rowCount = sheet.getLastRowNum();
-            int colCount = sheet.getRow(0).getLastCellNum();
+            int colCount = sheet.getRow(0).getLastCellNum();	
 
             data = new String[rowCount][colCount];
             DataFormatter formatter = new DataFormatter();
