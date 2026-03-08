@@ -6,7 +6,7 @@ dependency-reduced-pom.xml
 
 # =========================
 # Allure Reports
-# =========================
+# ========================
 allure-results/
 allure-report/
 
