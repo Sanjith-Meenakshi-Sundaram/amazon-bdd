@@ -10,6 +10,9 @@ dependency-reduced-pom.xml
 allure-results/
 allure-report/
 
+# TestNG reports
+test-output/
+
 # =========================
 # Eclipse
 # =========================
