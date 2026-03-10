@@ -24,16 +24,22 @@ public class SearchSteps {
     @When("user searches products from Excel file")
     public void user_searches_products_from_excel_file() {
 
-        String[][] data = ExcelReader.getTestData(filePath, 0);
+    	 String[][] data = ExcelReader.getTestData(filePath, 0);
 
-        for (String[] row : data) {
+    	    for (String[] row : data) {
 
-            String product = row[0];
+    	        String product = row[0];
 
-            System.out.println("Searching product: " + product);
+    	        if (product == null || product.trim().isEmpty()) {
+    	            System.out.println("Skipping empty product from Excel");
+    	            continue;
+    	        }
 
-            searchPage.searchProduct(product);
+    	        System.out.println("Searching product: " + product);
+
+    	        searchPage.searchProduct(product);
         }
+    	    searchPage.filter();
     }
 
     @Then("search results should appear")
